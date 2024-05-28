@@ -1,7 +1,7 @@
 import path from 'path'
 import Client from '../SpaceTraders.js/src/client/Client'
 import Ship from '../SpaceTraders.js/src/client/ships/Ship'
-const express = require('express')
+import express from 'express'
 
 export default class WebClient {
   private client: Client
