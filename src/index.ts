@@ -26,7 +26,8 @@ client.on('ready', async () => {
   console.log(`Current system count: ${client.systems.cache.size}`)
 
   if (client.agent.homeSystem) {
-    client.agent.homeSystem.find(Trait.SHIPYARD)
+    const shipYards = await client.agent.homeSystem.find(Trait.SHIPYARD)
+    console.log(await client.agent.homeSystem.getShipShop(shipYards[0].symbol))
   }
 })
 
