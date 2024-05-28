@@ -25,12 +25,8 @@ client.on('ready', async () => {
   console.log(`Current ship count: ${client.ships.cache.size}`)
   console.log(`Current system count: ${client.systems.cache.size}`)
 
-  console.log(client.systems.cache)
-
-  if (client.ships.cache.size < 3) {
-    for (const system of Array.from(client.systems.cache.values())) {
-      await system.find(Trait.SHIPYARD)
-    }
+  if (client.agent.homeSystem) {
+    client.agent.homeSystem.find(Trait.SHIPYARD)
   }
 })
 
