@@ -106,7 +106,7 @@ var Client = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.ships.fetch()];
                     case 2:
                         _b.sent();
-                        return [4 /*yield*/, this.systems.fetch()];
+                        return [4 /*yield*/, this.systems.fetchAll()];
                     case 3:
                         _b.sent();
                         this.emit('ready');

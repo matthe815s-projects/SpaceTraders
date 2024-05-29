@@ -24,11 +24,7 @@ client.on('ready', async () => {
 
   console.log(`Current ship count: ${client.ships.cache.size}`)
   console.log(`Current system count: ${client.systems.cache.size}`)
-
-  if (client.agent.homeSystem) {
-    const shipYards = await client.agent.homeSystem.find(Trait.SHIPYARD)
-    console.log(await client.agent.homeSystem.getShipShop(shipYards[0].symbol))
-  }
+  console.log(`Current money: $${client.agent.credits}`)
 })
 
 client.on('contractsLoad', (contracts: Contract[]) => {
